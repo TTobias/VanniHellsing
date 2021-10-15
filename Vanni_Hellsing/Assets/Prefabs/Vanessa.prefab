@@ -54,8 +54,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281cc41d411c1f844ba51d3219cbf6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shiftSpeed: 2
-  borderWidth: 5
+  shiftSpeed: 0.15
+  borderWidth: 4.7
+  bolts: 0
+  sticks: 0
+  maxBolts: 5
+  maxSticks: 10
+  onCarving: 0
+  carvingProgress: 0
+  carvingMax: 3
+  carveDirections: 
 --- !u!23 &7215870775732661763
 MeshRenderer:
   m_ObjectHideFlags: 0

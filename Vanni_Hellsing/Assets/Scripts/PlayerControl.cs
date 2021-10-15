@@ -15,16 +15,14 @@ public class PlayerControl : MonoBehaviour
     public int maxSticks = 10;
 
 
+    public int health = 3;
+    public int maxHealth = 3;
 
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
         //Scarving
-        if(onScarving){
+        if(onCarving){
             // 0=up, 1=right, 2=left, 3=down
             int dir =   Input.GetButtonDown("up")? 0:
                         Input.GetButtonDown("right")? 1: 
@@ -32,13 +30,18 @@ public class PlayerControl : MonoBehaviour
                         Input.GetButtonDown("down")? 3: -1;
             
             if(dir >= 0 && dir < 4){
-                makeScarve(dir);
+                makeCarve(dir);
             }
         }
 
         //Shooting
-        if(Input.GetButtonDown("attack") && bolts > 0){
-            makeShot();
+        if(Input.GetButtonDown("attack")){
+            if(bolts > 0){
+                Debug.Log("SHOOTING SUCCESSFULL");
+                makeShot();
+            }else{
+                Debug.Log("SHOOTING FAILED");
+            }
         }
 
     }
@@ -47,8 +50,8 @@ public class PlayerControl : MonoBehaviour
         doMovement();
 
         //Scarving
-        if(!onScarving && bolts < maxBolts && sticks > 0){
-            createNewScarve();
+        if(!onCarving && bolts < maxBolts && sticks > 0){
+            createNewCarve();
         }
     }
 
@@ -68,22 +71,57 @@ public class PlayerControl : MonoBehaviour
 
 
 
-    public bool onScarving = false;
-    public int scarvingProgress = 0;
-    public int scarvingMax = 3;
-    public int[] scarveDirections;
+    public bool onCarving = false;
+    public int carvingProgress = 0;
+    public int carvingMax = 3;
+    public int[] carveDirections;
     // 0=up, 1=right, 2=left, 3=down
-    public void makeScarve(int dir){
-        
+    public void makeCarve(int dir){
+        if(carveDirections[carvingProgress] == dir){
+            Debug.Log("CARVE BUTTON CONFIRMED");
+            //PROGRESS
+            carvingProgress++;
+            if(carvingProgress == carvingMax){
+                bolts++;
+                sticks--;
+                onCarving = false;
+            }
+
+        }else{
+            Debug.Log("CARVING FAILED");
+            //FAILURE
+            sticks--;
+            onCarving = false;
+        }
     }
 
-    public void createNewScarve(){
-        
+    public void createNewCarve(){
+        onCarving = true;
+        carvingProgress = 0;
+        int[] dirs = new int[carvingMax];
+        for(int i = 0; i<carvingMax; i++){
+            dirs[i] = randomDir();
+        }
+        carveDirections = dirs;
+    }
+
+    int randomDir(){
+        float tmp = Random.Range(0f,10f);
+        // 0=up, 1=right, 2=left, 3=down
+        return tmp<3.5f?0: tmp<5.5f?1: tmp<7.5f? 2: 3;
     }
 
 
 
     public void makeShot(){
         bolts--;
+        //TODO Shot
     }
+
+
+    public void takeDamage(){
+
+    }
+
+    
 }
