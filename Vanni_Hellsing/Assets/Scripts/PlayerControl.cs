@@ -8,6 +8,14 @@ public class PlayerControl : MonoBehaviour
     public float borderWidth = 5f;
 
 
+    public int bolts = 0;
+    public int sticks = 0;
+
+    public int maxBolts = 5;
+    public int maxSticks = 10;
+
+
+
     void Start()
     {
         
