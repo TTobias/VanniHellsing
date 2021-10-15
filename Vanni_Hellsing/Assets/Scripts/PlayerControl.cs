@@ -23,11 +23,33 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-        
+        //Scarving
+        if(onScarving){
+            // 0=up, 1=right, 2=left, 3=down
+            int dir =   Input.GetButtonDown("up")? 0:
+                        Input.GetButtonDown("right")? 1: 
+                        Input.GetButtonDown("left")? 2:
+                        Input.GetButtonDown("down")? 3: -1;
+            
+            if(dir >= 0 && dir < 4){
+                makeScarve(dir);
+            }
+        }
+
+        //Shooting
+        if(Input.GetButtonDown("attack") && bolts > 0){
+            makeShot();
+        }
+
     }
 
     void FixedUpdate(){
         doMovement();
+
+        //Scarving
+        if(!onScarving && bolts < maxBolts && sticks > 0){
+            createNewScarve();
+        }
     }
 
     void doMovement(){
@@ -40,5 +62,28 @@ public class PlayerControl : MonoBehaviour
         }
 
         this.transform.position = new Vector3(newX, this.transform.position.y, this.transform.position.z);
+    }
+
+
+
+
+
+    public bool onScarving = false;
+    public int scarvingProgress = 0;
+    public int scarvingMax = 3;
+    public int[] scarveDirections;
+    // 0=up, 1=right, 2=left, 3=down
+    public void makeScarve(int dir){
+        
+    }
+
+    public void createNewScarve(){
+        
+    }
+
+
+
+    public void makeShot(){
+        bolts--;
     }
 }
