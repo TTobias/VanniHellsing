@@ -18,6 +18,8 @@ public class PlayerControl : MonoBehaviour
     public int health = 3;
     public int maxHealth = 3;
 
+    public int score;
+
 
     void Update()
     {
@@ -123,5 +125,5 @@ public class PlayerControl : MonoBehaviour
 
     }
 
-    
+
 }
