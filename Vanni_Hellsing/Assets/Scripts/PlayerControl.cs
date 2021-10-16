@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class PlayerControl : MonoBehaviour
     public Sprite emptyHeart;
 
     public int score;
+
+    public TextMeshProUGUI gameOver;
 
     public GameObject bolt;
     private void Start()
@@ -172,10 +175,6 @@ public class PlayerControl : MonoBehaviour
     }
 
 
-    public void takeDamage(){
-
-    }
-
     public void setSticks(int x)
     {
         if (sticks < 10)
@@ -187,6 +186,12 @@ public class PlayerControl : MonoBehaviour
     public void reduceHearts(int x)
     {
         health--;
+        if(health <= 0)
+        {
+
+            gameOver.enabled = true;
+            
+        }
     }
 
     public void increaseScore(int x)

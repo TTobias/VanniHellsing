@@ -5,11 +5,9 @@ using UnityEngine.UI;
 using TMPro;
 
 public class UI_Control : MonoBehaviour
-{
-
+{ 
     public PlayerControl pc;
 
-    
     public TextMeshProUGUI score;
     public TextMeshProUGUI WoodCount;
     public TextMeshProUGUI BoltCount;
@@ -32,16 +30,13 @@ public class UI_Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
-        //resources.text = "Sticks: "+pc.sticks+"\nBolts: "+pc.bolts;
         for (int i = 0; i < arrows.Length; i++)
         {
             arrows[i].sprite = toDirection(pc.carveDirections[i]);
         }
         //Score
-        score.text = pc.score +"";
-        WoodCount.text = ": "+pc.sticks;
+        score.text = pc.getScore() + " ";
+        WoodCount.text = ": " + pc.sticks;
         BoltCount.text = ": " + pc.bolts;
     }
     Sprite toDirection(int dir){

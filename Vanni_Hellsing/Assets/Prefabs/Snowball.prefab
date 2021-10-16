@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b1889c3f7aee67c479e49f171a736c3f, type: 2}
+  - {fileID: 2100000, guid: 8f2a61dd9aed9634d976ccfed11be53d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -128,7 +128,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 0}
   speed: {x: 0, y: 0, z: -4}
-  scaleChange: {x: 0.001, y: 0.001, z: 0.001}
+  scaleChange: {x: 0.01, y: 0.01, z: 0.01}
+  roatationChange: {x: -20, y: 0, z: 0}
 --- !u!1001 &3876555805996624674
 PrefabInstance:
   m_ObjectHideFlags: 0

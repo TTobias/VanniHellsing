@@ -32,7 +32,7 @@ public class ItemSpawner : MonoBehaviour
                 }
 
             }
-            Instantiate(wood,new Vector3(x,1,70),Quaternion.identity);
+            Instantiate(wood,new Vector3(x,0,70),Quaternion.identity);
 
             currentSpawnTimer = Random.Range(timer_min,timer_max);
         }else{

@@ -47,6 +47,8 @@ public class Schneepir : MonoBehaviour
         }
         if (currentAttackTimer < 0)
         {
+            currentAttackTimer = Random.Range(timer_min, timer_max);
+
             switch (phase)
             {
                 case 1:
@@ -70,14 +72,16 @@ public class Schneepir : MonoBehaviour
                     for (int i = 0; i < 2; i++)
                     {
                         int random2 = Random.Range(0, 2);
+                        int random4 = Random.Range(0, 10);
+                        int random5 = Random.Range(-4, 5);
                         switch (random2)
                         {
                             case 0:
-                                Instantiate(iceblock, new Vector3(transform.position.x, 1, 25), Quaternion.identity);
+                                Instantiate(iceblock, new Vector3(random5, 1, 25-random4), Quaternion.identity);
                                 break;
 
                             case 1:
-                                Instantiate(snowball, new Vector3(transform.position.x, 1, 25), Quaternion.identity);
+                                Instantiate(snowball, new Vector3(random5, 1, 25-random4), Quaternion.identity);
                                 break;
 
                             default:
@@ -86,29 +90,30 @@ public class Schneepir : MonoBehaviour
                     }
                     break;
                 case 3:
-                    for (int i = -4; i < 4; i++)
+                    for (int i = -4; i < 4; i = i + 2)
                     {
                         int random2 = Random.Range(0, 2);
+                        int random4 = Random.Range(0, 10);
                         switch (random2)
                         {
                             case 0:
-                                Instantiate(iceblock, new Vector3(i, 1, 25), Quaternion.identity);
+                                Instantiate(iceblock, new Vector3(i, 1, 25-random4), Quaternion.identity);
                                 break;
 
                             case 1:
-                                Instantiate(snowball, new Vector3(i, 1, 25), Quaternion.identity);
+                                Instantiate(snowball, new Vector3(i, 1, 25-random4), Quaternion.identity);
                                 break;
 
                             default:
                                 break;
                         }
                     }
+                    currentAttackTimer = Random.Range(5, 10);
                     break;
 
                 default:
                     break;
             }
-            currentAttackTimer = Random.Range(timer_min, timer_max);
         }
         else
         {
@@ -119,7 +124,11 @@ public class Schneepir : MonoBehaviour
     public void reduceHp()
     {
         hp -= 1;
-        if (hp <= 3)
+        if (hp == 0)
+        {
+
+        }
+        else if (hp <= 3)
         {
             phase = 3;
         }

@@ -7,6 +7,7 @@ public class Snowball : MonoBehaviour
     public Rigidbody body;
     public Vector3 speed = new Vector3(0, 0, -4);
     public Vector3 scaleChange = new Vector3(0.01f, 0.01f, 0.01f);
+    public Vector3 roatationChange = new Vector3(0, 3, 0);
     
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class Snowball : MonoBehaviour
     {
         body.MovePosition(transform.position + speed * Time.fixedDeltaTime);
         body.transform.localScale += scaleChange * Time.fixedDeltaTime;
+        body.transform.Rotate(roatationChange * Time.fixedDeltaTime);
     }
 
     public void OnTriggerEnter(Collider other)
