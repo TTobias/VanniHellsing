@@ -33,7 +33,7 @@ public class Vampire : MonoBehaviour
             {
                 case 0:
                     //Summon bat
-                    Instantiate(bat, new Vector3(transform.position.x, 1, 29), Quaternion.identity);
+                    Instantiate(bat, new Vector3(transform.position.x, 1, 19), Quaternion.identity);
                     break;
 
                 case 1:

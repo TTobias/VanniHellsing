@@ -19,6 +19,10 @@ public class UI_Control : MonoBehaviour
     public Sprite rightArrow;
     public Sprite downArrow;
     public Sprite upArrow;
+    public Sprite leftArrowA;
+    public Sprite rightArrowA;
+    public Sprite downArrowA;
+    public Sprite upArrowA;
 
 
     // Start is called before the first frame update
@@ -30,10 +34,27 @@ public class UI_Control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < arrows.Length; i++)
+        if (pc.sticks > 0 && pc.bolts < 5)
         {
-            arrows[i].sprite = toDirection(pc.carveDirections[i]);
+            for (int i = 0; i < arrows.Length; i++)
+            {
+                arrows[i].enabled = true;
+                arrows[i].sprite = toDirection(pc.carveDirections[i]);
+            }
+            for (int i = 0; i < pc.carvingProgress; i++)
+            {
+                arrows[i].sprite = toDirectionA(pc.carveDirections[i]);
+            }
         }
+        else
+        {
+            for (int i = 0; i < arrows.Length; i++)
+            {
+                arrows[i].enabled = false;
+            }
+        }
+        
+        
         //Score
         score.text = pc.getScore() + " ";
         WoodCount.text = ": " + pc.sticks;
@@ -47,6 +68,18 @@ public class UI_Control : MonoBehaviour
             case(2): return leftArrow;
             case(3): return downArrow;
             default: return rightArrow;
+        }
+    }
+
+    Sprite toDirectionA(int dir)
+    {
+        switch (dir)
+        {
+            case (0): return upArrowA;
+            case (1): return rightArrowA;
+            case (2): return leftArrowA;
+            case (3): return downArrowA;
+            default: return rightArrowA;
         }
     }
 }
