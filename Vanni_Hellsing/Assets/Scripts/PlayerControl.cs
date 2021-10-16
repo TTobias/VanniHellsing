@@ -125,5 +125,18 @@ public class PlayerControl : MonoBehaviour
 
     }
 
+    public void setSticks(int x)
+    {
+        if (sticks < 10)
+        {
+            sticks++;
+        }
+    }
+
+    public void reduceHearts(int x)
+    {
+        health--;
+    }
+
 
 }
