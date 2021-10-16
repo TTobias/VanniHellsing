@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1258367874456745971}
   m_Layer: 0
   m_Name: Ghoul
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 0}
-  speed: {x: 0, y: 0, z: -6}
+  speed: {x: 0, y: 0, z: -4}
 --- !u!54 &1258367874456745971
 Rigidbody:
   m_ObjectHideFlags: 0

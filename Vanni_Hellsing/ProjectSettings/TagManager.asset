@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wood
+  - Stone
+  - Enemy
+  - Spawner
+  - Vampire
+  - Bat
+  - Schneepir
   layers:
   - Default
   - TransparentFX

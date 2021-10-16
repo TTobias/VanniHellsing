@@ -20,10 +20,11 @@ public class PlayerControl : MonoBehaviour
 
     public int score;
 
+    public GameObject bolt;
 
     void Update()
     {
-        //Scarving
+        //Carving
         if(onCarving){
             // 0=up, 1=right, 2=left, 3=down
             int dir =   Input.GetButtonDown("up")? 0:
@@ -118,6 +119,8 @@ public class PlayerControl : MonoBehaviour
     public void makeShot(){
         bolts--;
         //TODO Shot
+        GameObject g = Instantiate(bolt, new Vector3(transform.position.x, 1, 1), Quaternion.identity);
+        g.GetComponent<Bolt>().pc = this;
     }
 
 
@@ -136,6 +139,16 @@ public class PlayerControl : MonoBehaviour
     public void reduceHearts(int x)
     {
         health--;
+    }
+
+    public void increaseScore(int x)
+    {
+        score += x;
+    }
+
+    public int getScore()
+    {
+        return score;
     }
 
 
