@@ -23,27 +23,32 @@ public class Bolt : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Stone"))
         {
+            SoundManager.instance.PlaySound("StoneHit", gameObject);
             Destroy(gameObject);
         }
         else if (other.gameObject.CompareTag("Enemy"))
         {
+            SoundManager.instance.PlaySound("EnemyHit", gameObject);
             pc.increaseScore(100);
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
         else if (other.gameObject.CompareTag("Vampire"))
         {
+            SoundManager.instance.PlaySound("EnemyHit", gameObject);
             pc.increaseScore(1000);
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
         else if (other.gameObject.CompareTag("Schneepir"))
         {
+            SoundManager.instance.PlaySound("EnemyHit", gameObject);
             other.gameObject.GetComponent<Schneepir>().reduceHp();
             Destroy(gameObject);
         }
         else if (other.gameObject.CompareTag("Bat"))
         {
+            SoundManager.instance.PlaySound("EnemyHit", gameObject);
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

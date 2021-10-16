@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -17,13 +18,43 @@ public class PlayerControl : MonoBehaviour
 
     public int health = 3;
     public int maxHealth = 3;
+    public Image[] hearts;
+    public Sprite fullHeart;
+    public Sprite emptyHeart;
 
     public int score;
 
     public GameObject bolt;
+    private void Start()
+    {
+        SoundManager.instance.PlaySound("Skiing", gameObject);
+    }
 
     void Update()
     {
+        
+        //Health Bar
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (health > maxHealth)
+            {
+                health = maxHealth;
+            }
+            if (i < health)
+            {
+                hearts[i].sprite = fullHeart;
+            } else
+            {
+                hearts[i].sprite = emptyHeart;
+            }
+            if (i < maxHealth)
+            {
+                hearts[i].enabled = true;
+            } else
+            {
+                hearts[i].enabled = false;
+            }
+        }  
         //Carving
         if(onCarving){
             // 0=up, 1=right, 2=left, 3=down
@@ -52,7 +83,7 @@ public class PlayerControl : MonoBehaviour
     void FixedUpdate(){
         doMovement();
 
-        //Scarving
+        //Carving
         if(!onCarving && bolts < maxBolts && sticks > 0){
             createNewCarve();
         }
@@ -83,6 +114,22 @@ public class PlayerControl : MonoBehaviour
         if(carveDirections[carvingProgress] == dir){
             Debug.Log("CARVE BUTTON CONFIRMED");
             //PROGRESS
+            switch (carvingProgress)
+            {
+                case 0:
+                    SoundManager.instance.PlaySound("Carv1", gameObject);
+                    break;
+                case 1:
+                    SoundManager.instance.PlaySound("Carv2", gameObject);
+                    break;
+                case 2:
+                    SoundManager.instance.PlaySound("Crav3", gameObject);
+                    break;
+                default:
+                    break;
+
+            }
+         
             carvingProgress++;
             if(carvingProgress == carvingMax){
                 bolts++;
@@ -119,6 +166,7 @@ public class PlayerControl : MonoBehaviour
     public void makeShot(){
         bolts--;
         //TODO Shot
+        SoundManager.instance.PlaySound("shot", gameObject);
         GameObject g = Instantiate(bolt, new Vector3(transform.position.x, 1, 1), Quaternion.identity);
         g.GetComponent<Bolt>().pc = this;
     }

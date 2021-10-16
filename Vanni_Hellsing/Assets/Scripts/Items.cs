@@ -24,6 +24,7 @@ public class Items : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            SoundManager.instance.PlaySound("GatherWood", gameObject);
             other.gameObject.GetComponent<PlayerControl>().setSticks(1);
             Destroy(gameObject);
         }
