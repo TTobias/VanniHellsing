@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: 50ae0eadbfc6d8e4b9bce32da52630fc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5934279369143041959
+    second: Tobias_Texturen_Gamejam_0
+  - first:
+      213: -2032425149965347719
+    second: Tobias_Texturen_Gamejam_1
+  - first:
+      213: 2217694049304640440
+    second: Tobias_Texturen_Gamejam_2
+  - first:
+      213: 3740015101429280578
+    second: Tobias_Texturen_Gamejam_3
+  - first:
+      213: -8822489782957418239
+    second: Tobias_Texturen_Gamejam_4
+  - first:
+      213: 1518083592967120769
+    second: Tobias_Texturen_Gamejam_5
+  - first:
+      213: 497977879302726490
+    second: Tobias_Texturen_Gamejam_6
+  - first:
+      213: 5649638312137062302
+    second: Tobias_Texturen_Gamejam_7
+  - first:
+      213: 7943530541905676833
+    second: Tobias_Texturen_Gamejam_8
+  - first:
+      213: 8625668746445644015
+    second: Tobias_Texturen_Gamejam_9
+  - first:
+      213: 6904886350543012140
+    second: Tobias_Texturen_Gamejam_10
+  - first:
+      213: -2424215368469552085
+    second: Tobias_Texturen_Gamejam_11
+  - first:
+      213: 9210287569539693811
+    second: Tobias_Texturen_Gamejam_12
+  - first:
+      213: -4541497240575951342
+    second: Tobias_Texturen_Gamejam_13
+  - first:
+      213: 7586609678957413665
+    second: Tobias_Texturen_Gamejam_14
+  - first:
+      213: -8099858378010415670
+    second: Tobias_Texturen_Gamejam_15
+  - first:
+      213: 2523436065391183160
+    second: Tobias_Texturen_Gamejam_16
+  - first:
+      213: -3251389503257100679
+    second: Tobias_Texturen_Gamejam_17
+  - first:
+      213: 6875385386543871389
+    second: Tobias_Texturen_Gamejam_18
+  - first:
+      213: 4465159253625811465
+    second: Tobias_Texturen_Gamejam_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_0
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 956
+        width: 384
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950cc4cda5435ada0800000000000000
+      internalID: -5934279369143041959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_1
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 879
+        width: 53
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974deb728106bc3e0800000000000000
+      internalID: -2032425149965347719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_2
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 881
+        width: 384
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bbfc4decf4d6ce10800000000000000
+      internalID: 2217694049304640440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_3
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 569
+        width: 108
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24fe9475be337e330800000000000000
+      internalID: 3740015101429280578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_4
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 562
+        width: 96
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1095f443948309580800000000000000
+      internalID: -8822489782957418239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_5
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 294
+        width: 390
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18767221cf0511510800000000000000
+      internalID: 1518083592967120769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_6
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 486
+        width: 80
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5367d92e3c29e600800000000000000
+      internalID: 497977879302726490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_7
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 259
+        width: 129
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97fd50ac1c876e40800000000000000
+      internalID: 5649638312137062302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_8
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 53
+        width: 78
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a01c4f0f61d3e60800000000000000
+      internalID: 7943530541905676833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_9
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 144
+        width: 80
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0e41e260884b770800000000000000
+      internalID: 8625668746445644015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_10
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 150
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c214f8a5d8513df50800000000000000
+      internalID: 6904886350543012140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_11
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 148
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24645767f47b5ed0800000000000000
+      internalID: -2424215368469552085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_12
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 144
+        width: 80
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fcfb9d0fb381df70800000000000000
+      internalID: 9210287569539693811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_13
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 57
+        width: 83
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ebd03525c59f0c0800000000000000
+      internalID: -4541497240575951342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_14
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 35
+        width: 84
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1250cc3be4d094960800000000000000
+      internalID: 7586609678957413665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_15
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 32
+        width: 84
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acda7b758b5879f80800000000000000
+      internalID: -8099858378010415670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_16
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 30
+        width: 80
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8350d035bbb050320800000000000000
+      internalID: 2523436065391183160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_17
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 36
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e3def297eb0e2d0800000000000000
+      internalID: -3251389503257100679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_18
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 34
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95fbdae4964a6f50800000000000000
+      internalID: 6875385386543871389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tobias_Texturen_Gamejam_19
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 30
+        width: 80
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9023ae90fae67fd30800000000000000
+      internalID: 4465159253625811465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c1968e36390be8f4692cfe9b178645c5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
