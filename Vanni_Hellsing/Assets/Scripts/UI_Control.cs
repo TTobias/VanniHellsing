@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UI_Control : MonoBehaviour
 { 
@@ -86,5 +87,16 @@ public class UI_Control : MonoBehaviour
             case (3): return downArrowA;
             default: return rightArrowA;
         }
+    }
+
+
+
+    public void replay(){
+        SceneManager.LoadScene("Main");
+    }
+
+
+    public void toMenu(){
+        SceneManager.LoadScene("Menu");
     }
 }

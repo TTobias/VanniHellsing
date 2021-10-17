@@ -28,6 +28,7 @@ public class PlayerControl : MonoBehaviour
 
     public TextMeshProUGUI gameOver;
     public Image gameOverBg;
+    public GameObject replayBtn, menuBtn;
 
     public GameObject bolt;
     private void Start()
@@ -219,6 +220,8 @@ public class PlayerControl : MonoBehaviour
         
             gameOver.enabled = true;
             gameOverBg.enabled = true;
+            menuBtn.SetActive(true);
+            replayBtn.SetActive(true);
             shiftSpeed = 0;
             WorldMovement.movementSpeed = 0;
             //TODO set world speed to 0 etc
