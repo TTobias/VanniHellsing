@@ -128,9 +128,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 0}
-  speed: 12
+  speed: 100
   pc: {fileID: 0}
   PoisonGas: {fileID: 8810180799435267311, guid: 6d7c869738d28df4db54189357dc5766, type: 3}
+  points: {fileID: 6919407560558513917, guid: 120f121dc1e20cb4eb2cbec4ea070ac4, type: 3}
 --- !u!1001 &384623449235279911
 PrefabInstance:
   m_ObjectHideFlags: 0
