@@ -84,11 +84,11 @@ public class Witchpir : MonoBehaviour
                         switch (random2)
                         {
                             case 0:
-                                Instantiate(potion, new Vector3(transform.position.x, 1, 23), Quaternion.identity);
+                                Instantiate(potion, new Vector3(random5, 1, 23 - random4), Quaternion.identity);
                                 break;
 
                             case 1:
-                                Instantiate(potion, new Vector3(transform.position.x, 1, 23), Quaternion.identity);
+                                Instantiate(potion, new Vector3(random5, 1, 23 - random4), Quaternion.identity);
                                 break;
 
                             default:
@@ -104,11 +104,11 @@ public class Witchpir : MonoBehaviour
                         switch (random2)
                         {
                             case 0:
-                                Instantiate(potion, new Vector3(transform.position.x, 1, 23), Quaternion.identity);
+                                Instantiate(potion, new Vector3(i, 1, 23 - random4), Quaternion.identity);
                                 break;
 
                             case 1:
-                                Instantiate(potion, new Vector3(transform.position.x, 1, 23), Quaternion.identity);
+                                Instantiate(potion, new Vector3(i, 1, 23 - random4), Quaternion.identity);
                                 break;
 
                             default:
