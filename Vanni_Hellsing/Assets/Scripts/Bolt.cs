@@ -14,7 +14,7 @@ public class Bolt : MonoBehaviour
         body = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+
     void FixedUpdate()
     {
         body.MovePosition(transform.position + Vector3.forward * Time.fixedDeltaTime * speed);

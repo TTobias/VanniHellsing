@@ -68,6 +68,8 @@ MonoBehaviour:
   - {fileID: 6730441333034200714, guid: ad844a5c002441e43a483f22a08cf414, type: 3}
   stage3Prefabs:
   - {fileID: 6730441333034200714, guid: 4f4f0153bf4228c4ead7ad2ea5006285, type: 3}
+  - {fileID: 6730441333034200714, guid: 2130bfd9a758d294a832dcb80b66fce3, type: 3}
+  - {fileID: 6730441333034200714, guid: 2130bfd9a758d294a832dcb80b66fce3, type: 3}
   stage4Prefabs:
   - {fileID: 6730441333034200714, guid: 6b61a120ac6551d48a20e29f0ccfab67, type: 3}
   stage5Prefabs:
