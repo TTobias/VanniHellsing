@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Bolt : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Bolt : MonoBehaviour
     public float speed = 12f;
     public PlayerControl pc;
     public GameObject PoisonGas;
+    public GameObject points;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,9 @@ public class Bolt : MonoBehaviour
         {
             SoundManager.instance.PlaySound("EnemyHit", gameObject);
             pc.increaseScore(100);
+            GameObject g = Instantiate(points, new Vector3(transform.position.x, transform.position.y+1, transform.position.z), Quaternion.identity);
+            g.GetComponent<TextMeshPro>().text = "+100";
+            Destroy(g, 0.5f);
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
@@ -42,6 +47,9 @@ public class Bolt : MonoBehaviour
         {
             SoundManager.instance.PlaySound("EnemyHit", gameObject);
             pc.increaseScore(1000);
+            GameObject g = Instantiate(points, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
+            g.GetComponent<TextMeshPro>().text = "+1000";
+            Destroy(g, 0.5f);
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
