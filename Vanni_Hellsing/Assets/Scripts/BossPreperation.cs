@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class BossPreperation : MonoBehaviour
@@ -9,7 +10,14 @@ public class BossPreperation : MonoBehaviour
     public bool SchneepirAvailable = true;
     public PlayerControl pc;
     public GameObject Schneepir;
-    public GameObject SchneepirUI;
+
+
+    //public GameObject SchneepirUI;
+    public Image bossIcon;
+    public Image bossbar;
+    public Image bossbarBg;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +25,12 @@ public class BossPreperation : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (pc.getScore() > 10000 && SchneepirAvailable)
         {
+            Debug.Log("Schneepir Spawned");
+
             CanSpawn = false;
             //Delete Everything
             GameObject[] prefabs = GameObject.FindGameObjectsWithTag("Vampire");
@@ -45,8 +55,17 @@ public class BossPreperation : MonoBehaviour
             }
             //Spawn Schneepir
             GameObject g = Instantiate(Schneepir, new Vector3(0, 1, 20), Quaternion.identity);
-            g.GetComponent<Schneepir>().textMesh = SchneepirUI.GetComponent<TextMeshProUGUI>();
-            SchneepirUI.SetActive(true);
+            Schneepir s = g.GetComponent<Schneepir>();
+            //g.GetComponent<Schneepir>().textMesh = SchneepirUI.GetComponent<TextMeshProUGUI>();
+            bossbar.enabled = true;
+            bossbarBg.enabled = true;
+            bossIcon.enabled = true;
+
+            s.bossbar = bossbar;
+            s.bossbarBg = bossbarBg;
+            s.bossIcon = bossIcon;
+            //SchneepirUI.SetActive(true);
+            
             SchneepirAvailable = false;
         }
     }

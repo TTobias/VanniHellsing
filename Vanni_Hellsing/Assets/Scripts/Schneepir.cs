@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Schneepir : MonoBehaviour
@@ -8,27 +9,35 @@ public class Schneepir : MonoBehaviour
     public GameObject snowball;
     public GameObject iceblock;
     public bool direction = true;
-    public int hp;
-    public TextMeshProUGUI textMesh;
+    public int hp = 10, hpMax = 10;
     public Rigidbody body;
     public Vector3 speed = new Vector3(1, 0, 0);
-    public int phase;
+    public int phase = 1;
     float currentAttackTimer;
     public float timer_min;
     public float timer_max;
-    // Start is called before the first frame update
+
+    
+    //public TextMeshProUGUI textMesh;
+    public Image bossIcon;
+    public Image bossbar;
+    public Image bossbarBg;
+
+
+
     void Start()
     {
-        hp = 10;
         body = GetComponent<Rigidbody>();
-        phase = 1;
         currentAttackTimer = Random.Range(timer_min, timer_max);
+        hp = hpMax;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void FixedUpdate()
     {
-        textMesh.text = "Boss: " + hp;
+        //textMesh.text = "Boss: " + hp;
+        bossbar.fillAmount = (float)hp / (float)hpMax;
+
         if (direction)
         {
             if(transform.position.x > 4)
@@ -124,9 +133,17 @@ public class Schneepir : MonoBehaviour
     public void reduceHp()
     {
         hp -= 1;
-        if (hp == 0)
+        if (hp <= 0)
         {
+            bossIcon.enabled = false;
+            bossbar.enabled = false;
+            bossbar.fillAmount = 1f;
+            bossbarBg.enabled = false;
 
+            WorldMovement.stage = 2;
+            BossPreperation.CanSpawn = true;
+
+            Destroy(this.gameObject);
         }
         else if (hp <= 3)
         {

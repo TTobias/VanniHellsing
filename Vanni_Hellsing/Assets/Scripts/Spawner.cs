@@ -2,28 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GhoulSpawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
-    public GameObject ghoul;
-    public float timer_min;
-    public float timer_max;
+    public GameObject obj;
+    public float timer_min, timer_max;
     float currentSpawnTimer;
     public LayerMask baselayer;
-    // Start is called before the first frame update
+
+    public float spawnDistance = 70f;
+
+    public bool spawnDuringBoss = true;
+    
+
+
     void Start()
     {
         currentSpawnTimer = Random.Range(timer_min, timer_max);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (BossPreperation.CanSpawn) {
-            if (currentSpawnTimer < 0)
-            {
-                int x = Random.Range(-4, 4);
-                transform.position = new Vector3(x, 1, 70);
 
+
+    void FixedUpdate(){
+
+        if(spawnDuringBoss || BossPreperation.CanSpawn){
+
+            if(currentSpawnTimer < 0){
+
+                //X position of the spawning object
+                int x = Random.Range(-4, 4);
+                transform.position = new Vector3(x, 0, spawnDistance);
+
+                //Collider Check
                 Collider[] hitColliders = Physics.OverlapSphere(new Vector3(x, 1, 70), 1, baselayer, QueryTriggerInteraction.UseGlobal);
                 foreach (var hitCollider in hitColliders)
                 {
@@ -34,16 +43,17 @@ public class GhoulSpawner : MonoBehaviour
                     }
 
                 }
+                Instantiate(obj ,new Vector3(x,0,70),Quaternion.identity);
 
-                Instantiate(ghoul, new Vector3(x, 1, 70), Quaternion.identity);
-                currentSpawnTimer = Random.Range(timer_min, timer_max);
-            }
-            else
-            {
-                currentSpawnTimer -= Time.deltaTime;
+                currentSpawnTimer = Random.Range(timer_min,timer_max);
+            }else{
+                currentSpawnTimer -= Time.fixedDeltaTime;
             }
         }
     }
+
+
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

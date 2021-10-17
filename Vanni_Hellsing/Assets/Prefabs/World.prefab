@@ -43,9 +43,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d0c8d22f977194cb5df60a663cb1cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 0.1
   tmpPos: 0
   loadTiles: 10
   tiles: []
   tileSize: 10
+  groundHeight: 1
   tilePrefab: {fileID: 6730441333034200714, guid: 6b61a120ac6551d48a20e29f0ccfab67, type: 3}
+  stage1Prefabs:
+  - {fileID: 6730441333034200714, guid: 29fea76f0701a0248a22544b9c2ef910, type: 3}
+  stage2Prefabs:
+  - {fileID: 6730441333034200714, guid: ad844a5c002441e43a483f22a08cf414, type: 3}
+  stage3Prefabs:
+  - {fileID: 6730441333034200714, guid: 6b61a120ac6551d48a20e29f0ccfab67, type: 3}
+  stage4Prefabs:
+  - {fileID: 6730441333034200714, guid: 6b61a120ac6551d48a20e29f0ccfab67, type: 3}
+  stage5Prefabs:
+  - {fileID: 6730441333034200714, guid: 6b61a120ac6551d48a20e29f0ccfab67, type: 3}

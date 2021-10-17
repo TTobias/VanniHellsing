@@ -11,9 +11,10 @@ public class PlayerControl : MonoBehaviour
 
 
     public int bolts = 0;
-    public int sticks = 0;
-
     public int maxBolts = 5;
+    public float boltSpeed = 12f;
+
+    public int sticks = 0;
     public int maxSticks = 10;
 
 
@@ -26,6 +27,7 @@ public class PlayerControl : MonoBehaviour
     public int score;
 
     public TextMeshProUGUI gameOver;
+    public Image gameOverBg;
 
     public GameObject bolt;
     private void Start()
@@ -172,12 +174,13 @@ public class PlayerControl : MonoBehaviour
         SoundManager.instance.PlaySound("shot", gameObject);
         GameObject g = Instantiate(bolt, new Vector3(transform.position.x, 1, 1), Quaternion.identity);
         g.GetComponent<Bolt>().pc = this;
+        g.GetComponent<Bolt>().speed = boltSpeed;
     }
 
 
     public void setSticks(int x)
     {
-        if (sticks < 10)
+        if (sticks < maxSticks)
         {
             sticks++;
         }
@@ -188,8 +191,7 @@ public class PlayerControl : MonoBehaviour
         health--;
         if(health <= 0)
         {
-
-            gameOver.enabled = true;
+            doGameOver();
             
         }
     }
@@ -204,5 +206,14 @@ public class PlayerControl : MonoBehaviour
         return score;
     }
 
+
+    public void doGameOver(){
+        
+            gameOver.enabled = true;
+            gameOverBg.enabled = true;
+            shiftSpeed = 0;
+            WorldMovement.movementSpeed = 0;
+            //TODO set world speed to 0 etc
+    }
 
 }

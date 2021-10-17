@@ -8,7 +8,8 @@ public class Vampire : MonoBehaviour
     public float timer_min;
     public float timer_max;
     float currentAttackTimer;
-    public Vector3 speed = new Vector3(0, 0, -4);
+    public float speedFactor = 1f;
+    //public Vector3 speed = new Vector3(0, 0, -4);
     public Vector3 right = new Vector3(1, 0, 0);
     public Vector3 left = new Vector3(-1, 0, 0);
     public GameObject bat;
@@ -20,11 +21,11 @@ public class Vampire : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (transform.position.z > 20)
         {
-            body.MovePosition(transform.position + speed * Time.fixedDeltaTime);
+        body.MovePosition(transform.position + Vector3.back * WorldMovement.movementSpeed * speedFactor * 2f * Time.fixedDeltaTime);
         } else if (currentAttackTimer < 0)
         {
             int random = Random.Range(0, 3);

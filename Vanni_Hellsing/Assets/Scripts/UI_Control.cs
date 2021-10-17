@@ -25,6 +25,11 @@ public class UI_Control : MonoBehaviour
     public Sprite upArrowA;
 
 
+    public Image bossIcon;
+    public Image bossBar;
+    public Image bossBarBg;
+
+
     // Start is called before the first frame update
     void Start()
     {

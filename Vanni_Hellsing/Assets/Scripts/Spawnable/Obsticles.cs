@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Iceblock : MonoBehaviour
+public class Obsticles : MonoBehaviour
 {
     public Rigidbody body;
-    public Vector3 speed = new Vector3(0, 0, -4);
+    public float speedFactor = 1f;
+    //public Vector3 speed = new Vector3(0, 0, -4);
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +14,13 @@ public class Iceblock : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        body.MovePosition(transform.position + speed * Time.fixedDeltaTime);
+       body.MovePosition(transform.position + Vector3.back * WorldMovement.movementSpeed * 2f * speedFactor * Time.fixedDeltaTime);
+
+        if(this.transform.position.z < -20f){
+            Destroy(this.gameObject);
+        }
     }
 
     public void OnTriggerEnter(Collider other)

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bolt : MonoBehaviour
 {
     public Rigidbody body;
-    public Vector3 speed = new Vector3(0, 0, 6);
+    public float speed = 12f;
     public PlayerControl pc;
     // Start is called before the first frame update
     void Start()
@@ -14,9 +14,13 @@ public class Bolt : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        body.MovePosition(transform.position + speed * Time.fixedDeltaTime);
+        body.MovePosition(transform.position + Vector3.forward * Time.fixedDeltaTime * speed);
+
+        if(this.transform.position.z > 200f){
+            Destroy(this.gameObject);
+        }
     }
 
     public void OnTriggerEnter(Collider other)
