@@ -23,7 +23,7 @@ public class BossPreperation : MonoBehaviour
     void Start()
     {
         CanSpawn = true;
-        SchneepirAvailable = false;
+        SchneepirAvailable = true;
     }
 
     // Update is called once per frame

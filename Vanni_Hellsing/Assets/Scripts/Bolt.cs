@@ -36,6 +36,25 @@ public class Bolt : MonoBehaviour
         else if (other.gameObject.CompareTag("Enemy"))
         {
             SoundManager.instance.PlaySound("EnemyHit", gameObject);
+            int random = Random.Range(1, 6);
+            switch (random)
+            {
+                case 1:
+                    SoundManager.instance.PlaySound("GhoulDeath1", gameObject);
+                    break;
+                case 2:
+                    SoundManager.instance.PlaySound("GhoulDeath2", gameObject);
+                    break;
+                case 3:
+                    SoundManager.instance.PlaySound("GhoulDeath3", gameObject);
+                    break;
+                case 4:
+                    SoundManager.instance.PlaySound("GhoulDeath4", gameObject);
+                    break;
+                default:
+                    SoundManager.instance.PlaySound("GhoulDeath5", gameObject);
+                    break;
+            }
             pc.increaseScore(100);
             GameObject g = Instantiate(points, new Vector3(transform.position.x, transform.position.y+1, transform.position.z), Quaternion.identity);
             g.GetComponent<TextMeshPro>().text = "+100";
@@ -49,6 +68,19 @@ public class Bolt : MonoBehaviour
             pc.increaseScore(1000);
             GameObject g = Instantiate(points, new Vector3(transform.position.x, transform.position.y + 1, transform.position.z), Quaternion.identity);
             g.GetComponent<TextMeshPro>().text = "+1000";
+            int random = Random.Range(1, 3);
+            switch (random)
+            {
+                case 1:
+                    SoundManager.instance.PlaySound("VampireDeath1", gameObject);
+                    break;
+                case 2:
+                    SoundManager.instance.PlaySound("VampireDeath2", gameObject);
+                    break;
+                default:
+                    SoundManager.instance.PlaySound("VampireDeath3", gameObject);
+                    break;
+            }
             Destroy(g, 0.5f);
             Destroy(other.gameObject);
             Destroy(gameObject);

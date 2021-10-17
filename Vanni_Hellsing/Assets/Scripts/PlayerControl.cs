@@ -196,6 +196,14 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
+    public void increaseHearts()
+    {
+        if (health < maxHealth)
+        {
+            health++;
+        }
+    }
+
     public void increaseScore(int x)
     {
         score += x;
