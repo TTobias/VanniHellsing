@@ -92,11 +92,13 @@ public class UI_Control : MonoBehaviour
 
 
     public void replay(){
+        pc.shiftSpeed = 0.15f;
+        WorldMovement.movementSpeed = 10f;
         SceneManager.LoadScene("Main");
     }
 
 
     public void toMenu(){
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene(0);
     }
 }

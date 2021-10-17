@@ -539,7 +539,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Replay
+  m_text: "Back to men\xFC\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1370,7 +1370,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Back to Menu
+  m_text: 'Replay
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1692,10 +1694,10 @@ RectTransform:
   m_Father: {fileID: 1754760755}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 238.847, y: -36.839}
-  m_SizeDelta: {x: 311.693, y: 73.678}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 238.84698, y: 197}
+  m_SizeDelta: {x: 311.693, y: 73.67801}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1133726331
 MonoBehaviour:
@@ -2076,7 +2078,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1507006629
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2706,10 +2708,10 @@ RectTransform:
   m_Father: {fileID: 1754760755}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -256.909, y: -36.839}
-  m_SizeDelta: {x: 332.438, y: 73.678}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -256.909, y: 197}
+  m_SizeDelta: {x: 332.438, y: 73.67801}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1915073369
 MonoBehaviour:
@@ -3107,7 +3109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1630038864361714910, guid: f4004c9a535ba004b9fe66af13034b86, type: 3}
       propertyPath: score
-      value: 10100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1630038864361714910, guid: f4004c9a535ba004b9fe66af13034b86, type: 3}
       propertyPath: menuBtn
