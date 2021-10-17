@@ -127,9 +127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 0}
-  timer_min: 5
-  timer_max: 10
-  speed: {x: 0, y: 0, z: -4}
+  timer_min: 2
+  timer_max: 4
+  speedFactor: 1
   right: {x: 1, y: 0, z: 0}
   left: {x: -1, y: 0, z: 0}
   bat: {fileID: 317452816413155412, guid: 53a0724c78cef854eb658fb62d1ea2be, type: 3}

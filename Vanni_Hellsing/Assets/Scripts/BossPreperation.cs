@@ -63,6 +63,8 @@ public class BossPreperation : MonoBehaviour
             bossbarBg.enabled = true;
             bossIcon.enabled = true;
 
+            s.pc = pc;
+
             s.bossbar = bossbar;
             s.bossbarBg = bossbarBg;
             s.bossIcon = bossIcon;
@@ -109,6 +111,8 @@ public class BossPreperation : MonoBehaviour
             s.bossbarBg = bossbarBg;
             s.bossIcon = bossIcon;
             //SchneepirUI.SetActive(true);
+
+            s.pc = pc;
 
             WitchpirAvailable = false;
         }

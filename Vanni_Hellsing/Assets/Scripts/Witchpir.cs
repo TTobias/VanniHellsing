@@ -15,6 +15,7 @@ public class Witchpir : MonoBehaviour
     float currentAttackTimer;
     public float timer_min;
     public float timer_max;
+    public PlayerControl pc;
 
 
     //public TextMeshProUGUI textMesh;
@@ -139,6 +140,8 @@ public class Witchpir : MonoBehaviour
 
             WorldMovement.stage = 3;
             BossPreperation.CanSpawn = true;
+
+            pc.increaseScore(20000);
 
             Destroy(this.gameObject);
         }

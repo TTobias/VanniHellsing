@@ -16,8 +16,9 @@ public class Schneepir : MonoBehaviour
     float currentAttackTimer;
     public float timer_min;
     public float timer_max;
+    public PlayerControl pc;
 
-    
+
     //public TextMeshProUGUI textMesh;
     public Image bossIcon;
     public Image bossbar;
@@ -142,6 +143,7 @@ public class Schneepir : MonoBehaviour
 
             WorldMovement.stage = 2;
             BossPreperation.CanSpawn = true;
+            pc.increaseScore(10000);
 
             Destroy(this.gameObject);
         }
