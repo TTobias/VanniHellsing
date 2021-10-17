@@ -11,6 +11,8 @@ TagManager:
   - Vampire
   - Bat
   - Schneepir
+  - Witchpir
+  - Potion
   layers:
   - Default
   - TransparentFX

@@ -44,8 +44,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SchneepirAvailable: 1
+  WitchpirAvailable: 1
   pc: {fileID: 0}
   Schneepir: {fileID: 6494520997599688092, guid: 63c32b313adaf5040bedcb9bf155f749, type: 3}
+  Witchpir: {fileID: 6494520997599688092, guid: 8b97002426467054f9dc04bdd969dc61, type: 3}
   bossIcon: {fileID: 0}
   bossbar: {fileID: 0}
   bossbarBg: {fileID: 0}

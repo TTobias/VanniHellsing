@@ -7,10 +7,11 @@ using TMPro;
 public class BossPreperation : MonoBehaviour
 {
     public static bool CanSpawn;
-    public bool SchneepirAvailable = true;
+    public bool SchneepirAvailable;
+    public bool WitchpirAvailable = true;
     public PlayerControl pc;
     public GameObject Schneepir;
-
+    public GameObject Witchpir;
 
     //public GameObject SchneepirUI;
     public Image bossIcon;
@@ -22,6 +23,7 @@ public class BossPreperation : MonoBehaviour
     void Start()
     {
         CanSpawn = true;
+        SchneepirAvailable = false;
     }
 
     // Update is called once per frame
@@ -54,7 +56,7 @@ public class BossPreperation : MonoBehaviour
                 Destroy(prefab);
             }
             //Spawn Schneepir
-            GameObject g = Instantiate(Schneepir, new Vector3(0, 1, 20), Quaternion.identity);
+            GameObject g = Instantiate(Schneepir, new Vector3(0, 1, 25), Quaternion.identity);
             Schneepir s = g.GetComponent<Schneepir>();
             //g.GetComponent<Schneepir>().textMesh = SchneepirUI.GetComponent<TextMeshProUGUI>();
             bossbar.enabled = true;
@@ -65,8 +67,50 @@ public class BossPreperation : MonoBehaviour
             s.bossbarBg = bossbarBg;
             s.bossIcon = bossIcon;
             //SchneepirUI.SetActive(true);
-            
+
             SchneepirAvailable = false;
+        }
+
+        if (pc.getScore() > 40000 && WitchpirAvailable)
+        {
+            Debug.Log("Witchpir Spawned");
+
+            CanSpawn = false;
+            //Delete Everything
+            GameObject[] prefabs = GameObject.FindGameObjectsWithTag("Vampire");
+            foreach (GameObject prefab in prefabs)
+            {
+                Destroy(prefab);
+            }
+            GameObject[] prefabs2 = GameObject.FindGameObjectsWithTag("Stone");
+            foreach (GameObject prefab in prefabs2)
+            {
+                Destroy(prefab);
+            }
+            GameObject[] prefabs3 = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject prefab in prefabs3)
+            {
+                Destroy(prefab);
+            }
+            GameObject[] prefabs4 = GameObject.FindGameObjectsWithTag("Bat");
+            foreach (GameObject prefab in prefabs4)
+            {
+                Destroy(prefab);
+            }
+            //Spawn Schneepir
+            GameObject g = Instantiate(Witchpir, new Vector3(0, 1, 25), Quaternion.identity);
+            Witchpir s = g.GetComponent<Witchpir>();
+            //g.GetComponent<Schneepir>().textMesh = SchneepirUI.GetComponent<TextMeshProUGUI>();
+            bossbar.enabled = true;
+            bossbarBg.enabled = true;
+            bossIcon.enabled = true;
+
+            s.bossbar = bossbar;
+            s.bossbarBg = bossbarBg;
+            s.bossIcon = bossIcon;
+            //SchneepirUI.SetActive(true);
+
+            WitchpirAvailable = false;
         }
     }
 }

@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 6494520997599688088}
   - component: {fileID: 6494520997599688089}
   - component: {fileID: 6494520997599688090}
-  - component: {fileID: 6494520997599688091}
   - component: {fileID: 4688906187471485495}
+  - component: {fileID: -8662966955865479424}
   m_Layer: 0
-  m_Name: Schneepir
-  m_TagString: Schneepir
+  m_Name: Witchpir
+  m_TagString: Witchpir
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d39efe51f27f39847b79d9ac9e7f0f75, type: 2}
+  - {fileID: 2100000, guid: 82694db5aa2563744ac8ac9a066205c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -98,31 +98,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &6494520997599688091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6494520997599688092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b5b5513d4b926e429fa0ec5af543441, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snowball: {fileID: 4294429313366756913, guid: a16edd388974c3447a6ee972c3bc7154, type: 3}
-  iceblock: {fileID: 2586408283302716211, guid: a78ce04341250b647b4cfd2a7a7236ac, type: 3}
-  direction: 1
-  hp: 0
-  hpMax: 10
-  body: {fileID: 0}
-  speed: {x: 1, y: 0, z: 0}
-  phase: 1
-  timer_min: 2
-  timer_max: 5
-  bossIcon: {fileID: 0}
-  bossbar: {fileID: 0}
-  bossbarBg: {fileID: 0}
 --- !u!54 &4688906187471485495
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -139,3 +114,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-8662966955865479424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6494520997599688092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fbf129dcbb4c9b4ca63a25fb9767a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  potion: {fileID: 3146061208772662849, guid: aad47448df2e92f46bdc2f3fa251013e, type: 3}
+  direction: 1
+  hp: 20
+  hpMax: 20
+  body: {fileID: 0}
+  speed: {x: 2, y: 0, z: 0}
+  phase: 1
+  timer_min: 2
+  timer_max: 5
+  bossIcon: {fileID: 0}
+  bossbar: {fileID: 0}
+  bossbarBg: {fileID: 0}

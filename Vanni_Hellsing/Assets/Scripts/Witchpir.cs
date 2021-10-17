@@ -4,27 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Schneepir : MonoBehaviour
+public class Witchpir : MonoBehaviour
 {
-    public GameObject snowball;
-    public GameObject iceblock;
+    public GameObject potion;
     public bool direction = true;
-    public int hp = 10, hpMax = 10;
+    public int hp = 15, hpMax = 15;
     public Rigidbody body;
-    public Vector3 speed = new Vector3(1, 0, 0);
+    public Vector3 speed = new Vector3(2, 0, 0);
     public int phase = 1;
     float currentAttackTimer;
     public float timer_min;
     public float timer_max;
 
-    
+
     //public TextMeshProUGUI textMesh;
     public Image bossIcon;
     public Image bossbar;
     public Image bossbarBg;
 
-
-
+    // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody>();
@@ -32,15 +30,14 @@ public class Schneepir : MonoBehaviour
         hp = hpMax;
     }
 
-
+    // Update is called once per frame
     void FixedUpdate()
     {
-        //textMesh.text = "Boss: " + hp;
         bossbar.fillAmount = (float)hp / (float)hpMax;
 
         if (direction)
         {
-            if(transform.position.x > 4)
+            if (transform.position.x > 4)
             {
                 direction = false;
             }
@@ -48,7 +45,7 @@ public class Schneepir : MonoBehaviour
         }
         else
         {
-            if(transform.position.x < -4)
+            if (transform.position.x < -4)
             {
                 direction = true;
             }
@@ -66,11 +63,12 @@ public class Schneepir : MonoBehaviour
                     switch (random)
                     {
                         case 0:
-                            Instantiate(iceblock, new Vector3(transform.position.x, 1, 23), Quaternion.identity);
+                            Instantiate(potion, new Vector3(transform.position.x, 1, 23), Quaternion.identity);
+                            //StartCoroutine(nameof(attack));
                             break;
 
                         case 1:
-                            Instantiate(snowball, new Vector3(transform.position.x, 1, 23), Quaternion.identity);
+                            Instantiate(potion, new Vector3(transform.position.x, 1, 23), Quaternion.identity);
                             break;
 
                         default:
@@ -86,11 +84,11 @@ public class Schneepir : MonoBehaviour
                         switch (random2)
                         {
                             case 0:
-                                Instantiate(iceblock, new Vector3(random5, 1, 23-random4), Quaternion.identity);
+                                Instantiate(potion, new Vector3(transform.position.x, 1, 23), Quaternion.identity);
                                 break;
 
                             case 1:
-                                Instantiate(snowball, new Vector3(random5, 1, 23-random4), Quaternion.identity);
+                                Instantiate(potion, new Vector3(transform.position.x, 1, 23), Quaternion.identity);
                                 break;
 
                             default:
@@ -106,11 +104,11 @@ public class Schneepir : MonoBehaviour
                         switch (random2)
                         {
                             case 0:
-                                Instantiate(iceblock, new Vector3(i, 1, 23-random4), Quaternion.identity);
+                                Instantiate(potion, new Vector3(transform.position.x, 1, 23), Quaternion.identity);
                                 break;
 
                             case 1:
-                                Instantiate(snowball, new Vector3(i, 1, 23-random4), Quaternion.identity);
+                                Instantiate(potion, new Vector3(transform.position.x, 1, 23), Quaternion.identity);
                                 break;
 
                             default:
@@ -129,7 +127,6 @@ public class Schneepir : MonoBehaviour
             currentAttackTimer -= Time.deltaTime;
         }
     }
-
     public void reduceHp()
     {
         hp -= 1;
@@ -140,18 +137,25 @@ public class Schneepir : MonoBehaviour
             bossbar.fillAmount = 1f;
             bossbarBg.enabled = false;
 
-            WorldMovement.stage = 2;
+            WorldMovement.stage = 3;
             BossPreperation.CanSpawn = true;
 
             Destroy(this.gameObject);
         }
-        else if (hp <= 3)
+        else if (hp <= 5)
         {
             phase = 3;
         }
-        else if (hp <= 6)
+        else if (hp <= 10)
         {
             phase = 2;
         }
+    }
+
+    IEnumerator attack()
+    {
+        yield return new WaitForSeconds(2.0f);
+        Debug.Log("attack");
+
     }
 }

@@ -7,6 +7,7 @@ public class Bolt : MonoBehaviour
     public Rigidbody body;
     public float speed = 12f;
     public PlayerControl pc;
+    public GameObject PoisonGas;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +54,18 @@ public class Bolt : MonoBehaviour
         else if (other.gameObject.CompareTag("Bat"))
         {
             SoundManager.instance.PlaySound("EnemyHit", gameObject);
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.CompareTag("Witchpir"))
+        {
+            SoundManager.instance.PlaySound("EnemyHit", gameObject);
+            other.gameObject.GetComponent<Witchpir>().reduceHp();
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.CompareTag("Potion"))
+        {
+            Instantiate(PoisonGas, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.Euler(0, 90, 0));
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
